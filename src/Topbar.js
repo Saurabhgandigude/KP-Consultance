@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { BrowserRouter,Link,Route,Routes } from 'react-router-dom';
 import './topbar.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
+
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -26,11 +28,11 @@ function Navbar() {
                   <a href="#">Engineering Admission</a>
                   <a href="#">Medical Admission</a>
                   <a href="#">Management Admission</a>
-                </div>
+                </div> 
               )}
             </li>
             <li><a href="#">Direct Admission</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><Link to="/contactus">Contact Us</Link></li> {/* Use Link component for "Contact Us" */}
             <li><a href="#">About Us</a></li>
           </ul>
         </div>
